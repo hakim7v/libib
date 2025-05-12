@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Libib</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1> Simple Libib</h1>
+    <nav>
+        
+    </nav>
+    <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+            <li class="sidebar-menu-item active">
+              <a href="{{ url_for('index') }}" class="sidebar-menu-link">
+                <i data-lucide="book-open" class="sidebar-icon teal-icon"></i>
+                <span>Library</span>
+              </a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="{{ url_for('add_book') }}" class="sidebar-menu-link">
+                <i data-lucide="plus" class="sidebar-icon"></i>
+                <span>Add Items</span>
+              </a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="#" class="sidebar-menu-link">
+                <i data-lucide="plus" class="sidebar-icon"></i>
+                <span>Add Collection</span>
+              </a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="#" class="sidebar-menu-link">
+                <i data-lucide="upload" class="sidebar-icon"></i>
+                <span>Publish</span>
+              </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <header class="header" data-aos="fade-down" data-aos-duration="800">
+          <div class="header-top">
+            <div class="search-container">
+              <i data-lucide="search" class="search-icon"></i>
+              <input type="text" placeholder="Search books..." class="search-input" />
+            </div>
+            <div class="user-account">
+              <div class="user-info">
+                <div class="user-name">John Smith</div>
+                <div class="user-role">Account Menu</div>
+              </div>
+              <button class="user-button ripple">
+                <i data-lucide="user" class="user-icon"></i>
+              </button>
+            </div>
+          </div>
+        </header>
+    </div>
+        {% block content %}{% endblock %}
+    
+    
+</body>
+</html>
